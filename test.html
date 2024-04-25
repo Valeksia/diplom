@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа для оптимизации учебного процесса</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #ffc736;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+    display: flex; /* Добавляем этот стиль для выравнивания логотипа и текста */
+    align-items: center; /* Чтобы элементы выровнялись по вертикали */
+}
+
+nav h1 img {
+    margin-right: 10px; /* Добавляем небольшой отступ между логотипом и текстом */
+    height: 40px; /* Устанавливаем высоту логотипа */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Избегаем отступа у первого элемента */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+#about, #branches, #cta {
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#about h2, #branches h2, #cta h2 {
+    margin-bottom: 20px;
+}
+
+.branches-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.branch {
+    flex-basis: calc(30% - 20px); /* Учитываем отступы */
+    margin-bottom: 20px; /* Добавляем отступ между элементами */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <header>
+        <div class="container">
+            <nav>
+                <h1><img src="img/logo.png" alt="Логотип Кодозавр"> Кодозавр</h1>
+                <ul>
+                    <li><a href="#">Вход</a></li>
+                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы верим, что программирование и робототехника помогает развить у детей такие важные навыки, как креативность, решение проблем, аналитическое мышление и коммуникация. Программирование также открывает возможности для будущей карьеры в технологической сфере. Наш сайт также предлагает различные игровые задания и конкурсы, чтобы сделать обучение более интересным и мотивирующим для детей. Мы стремимся вдохновить их на изучение программирования и помочь им обрести уверенность в своих способностях.Каждый урок содержит понятное объяснение нового материала и практические задания, которые помогут детям закрепить полученные знания.</p>
+        </div>
+    </section>
+
+    <section id="branches">
+        <div class="container">
+            <h2>Наши направления</h2>
+            <div class="branches-grid">
+                <div class="branch">
+                    <h3>Программирование</h3>
+                    <p>Учим программировать с самых основ.</p>
+                </div>
+                <div class="branch">
+                    <h3>3D моделирование</h3>
+                    <p>Изучаем трехмерный дизайн и моделирование.</p>
+                </div>
+                <div class="branch">
+                    <h3>Робототехника</h3>
+                    <p>Создаем и программируем роботов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="container">
+            <h2>Хотите начать обучение?</h2>
+            <a href="#" class="btn">Записаться на курс</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Платформа для оптимизации учебного процесса</p>
+        </div>
+    </footer>
+</body>
+</html>
