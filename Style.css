@@ -11,7 +11,7 @@
     width: 100%; /* Используем относительные единицы для ширины и высоты */
     height: auto;
 }
-       body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -91,7 +91,7 @@ section {
 
 .branch {
     flex-basis: calc(30% - 20px); /* Учитываем отступы */
-    margin-bottom: 20px; /* Добавляем отступ между элементами */
+    margin-bottom: 10px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -121,4 +121,75 @@ footer p {
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+
+LK 
+
+/* Стили для личного кабинета */
+#personal-cabinet {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-info h3 {
+    margin-top: 0;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+/* Стили для прогресса прохождения курсов */
+.progress-bar-inner {
+    background-color: #007bff;
+    border-radius: 10px;
+    height: 100%;
+}
+
+/* Стили для количества купленных курсов */
+.course-count {
+    font-weight: bold;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.avatar img {
+    width: 100%;
+    height: auto;
+}
+.user-info {
+    margin-bottom: 20px; /* Отступ снизу */
+    margin-right: 20px; /* Отступ справа */
+}
+
+.progress-info {
+    margin-bottom: 20px; /* Отступ снизу */
+    margin-left: 20px; /* Отступ слева */
 }
