@@ -1,14 +1,15 @@
+/* Стили для главной стр */
 .adaptive-img-v {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%; /* Используем 100% ширины относительно родительского элемента */
-    height: auto; /* Автоматическая высота для сохранения пропорций изображения */
+    width: 100%; 
+    height: auto;
 }
 
 .adaptive-img-fon {
     position: absolute;
-    width: 100%; /* Используем относительные единицы для ширины и высоты */
+    width: 100%; 
     height: auto;
 }
 body {
@@ -19,6 +20,7 @@ body {
 
 .container {
     max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -39,13 +41,13 @@ nav h1 {
     margin: 0;
     font-size: 32px;
     color: #fff;
-    display: flex; /* Добавляем этот стиль для выравнивания логотипа и текста */
-    align-items: center; /* Чтобы элементы выровнялись по вертикали */
+    display: flex; 
+    align-items: center;
 }
 
 nav h1 img {
-    margin-right: 10px; /* Добавляем небольшой отступ между логотипом и текстом */
-    height: 40px; /* Устанавливаем высоту логотипа */
+    margin-right: 10px; 
+    height: 40px; 
 }
 
 
@@ -61,7 +63,7 @@ nav ul li {
 }
 
 nav ul li:first-child {
-    margin-left: 0; /* Избегаем отступа у первого элемента */
+    margin-left: 0; 
 }
 
 nav ul li a {
@@ -83,19 +85,76 @@ section {
     margin-bottom: 20px;
 }
 
-.branches-grid {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.branch {
-    flex-basis: calc(30% - 20px); /* Учитываем отступы */
-    margin-bottom: 10px;
+h2 {
+    margin-bottom: 30px;
+}
+
+.branches-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center; 
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.branches-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-basis: calc(45% - 10px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.branch2 {
+    width: 100%;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+
+.sub-branches {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sub-branch {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .column {
+        flex-basis: 100%; 
+        margin-bottom: 20px;
+    }
 }
 
 footer {
@@ -124,7 +183,8 @@ footer p {
 }
 
 
-LK 
+
+
 
 /* Стили для личного кабинета */
 #personal-cabinet {
@@ -162,14 +222,14 @@ LK
     margin-bottom: 10px;
 }
 
-/* Стили для прогресса прохождения курсов */
+
 .progress-bar-inner {
     background-color: #007bff;
     border-radius: 10px;
     height: 100%;
 }
 
-/* Стили для количества купленных курсов */
+
 .course-count {
     font-weight: bold;
 }
@@ -192,4 +252,106 @@ LK
 .progress-info {
     margin-bottom: 20px; /* Отступ снизу */
     margin-left: 20px; /* Отступ слева */
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    animation: fadeIn 0.5s; 
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border-radius: 10px; 
+    border: none;
+    width: 80%; 
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s;
+    text-align: center;
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0);}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: -10px; 
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    font-size: 16px;
+    width: 100%; /* Полная ширина */
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-bottom: 2px solid #ffc736; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc736;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #ffc736;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
 }
