@@ -1,15 +1,18 @@
 /* Стили для главной стр */
+html {
+    scroll-behavior: smooth;
+}
 .adaptive-img-v {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: auto;
+    width: 100%; /* Используем 100% ширины относительно родительского элемента */
+    height: auto; /* Автоматическая высота для сохранения пропорций изображения */
 }
 
 .adaptive-img-fon {
     position: absolute;
-    width: 100%; 
+    width: 100%; /* Используем относительные единицы для ширины и высоты */
     height: auto;
 }
 body {
@@ -41,13 +44,13 @@ nav h1 {
     margin: 0;
     font-size: 32px;
     color: #fff;
-    display: flex; 
-    align-items: center;
+    display: flex; /* Добавляем этот стиль для выравнивания логотипа и текста */
+    align-items: center; /* Чтобы элементы выровнялись по вертикали */
 }
 
 nav h1 img {
-    margin-right: 10px; 
-    height: 40px; 
+    margin-right: 10px; /* Добавляем небольшой отступ между логотипом и текстом */
+    height: 40px; /* Устанавливаем высоту логотипа */
 }
 
 
@@ -63,7 +66,7 @@ nav ul li {
 }
 
 nav ul li:first-child {
-    margin-left: 0; 
+    margin-left: 0; /* Избегаем отступа у первого элемента */
 }
 
 nav ul li a {
@@ -89,7 +92,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center;
+    text-align: center; /* Центрируем заголовок */
 }
 
 h2 {
@@ -105,7 +108,7 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center; 
+    text-align: center; /* Центрируем заголовок */
 }
 
 h2 {
@@ -119,7 +122,7 @@ h2 {
 }
 
 .column {
-    flex-basis: calc(45% - 10px); 
+    flex-basis: calc(45% - 10px); /* Уменьшаем ширину колонок до 45% */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,7 +135,7 @@ h2 {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left; 
+    text-align: left; /* Левое выравнивание для контента */
 }
 
 .sub-branches {
@@ -143,16 +146,17 @@ h2 {
 .sub-branch {
     margin-top: 20px;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: left; /* Левое выравнивание для контента */
 }
+
 
 /* Адаптивность */
 @media (max-width: 768px) {
     .column {
-        flex-basis: 100%; 
+        flex-basis: 100%; /* На малых экранах одна колонка */
         margin-bottom: 20px;
     }
 }
@@ -171,18 +175,56 @@ footer p {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ffc736;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+
+
+/*футер*/
+footer {
+    background-color: #ffc736;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ffc736;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-info .social-media,
+.footer-info .contact-info {
+    margin-bottom: 10px;
+}
+
+.footer-info a {
+    margin: 0 5px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-info a:hover {
+    color: #ffffff;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    color: #555;
+}
 
 
 
@@ -222,14 +264,14 @@ footer p {
     margin-bottom: 10px;
 }
 
-
+/* Стили для прогресса прохождения курсов */
 .progress-bar-inner {
     background-color: #007bff;
     border-radius: 10px;
     height: 100%;
 }
 
-
+/* Стили для количества купленных курсов */
 .course-count {
     font-weight: bold;
 }
@@ -254,7 +296,7 @@ footer p {
     margin-left: 20px; /* Отступ слева */
 }
 
-
+/* Стили для модального окна */
 .modal {
     display: none; 
     position: fixed; 
@@ -283,7 +325,7 @@ footer p {
     max-width: 400px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideDown 0.5s;
-    text-align: center;
+    text-align: center; /* Центровка заголовка и логотипа */
 }
 
 @keyframes slideDown {
@@ -292,11 +334,11 @@ footer p {
 }
 
 .close {
-    color: #aaa;
+    color: #ffc736;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    margin-right: -10px; 
+    margin-right: -10px; /* Уменьшение отступа */
 }
 
 .close:hover,
@@ -309,7 +351,7 @@ footer p {
 form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start; /* Выравнивание по левому краю */
 }
 
 label {
@@ -326,13 +368,18 @@ input[type="password"] {
     border-radius: 0;
     font-size: 16px;
     width: 100%; /* Полная ширина */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Учет padding и border в общей ширине */
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-bottom: 2px solid #ffc736; 
+    border-bottom: 2px solid #ffc736; /* Цвет при фокусировке */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Центровка кнопки по горизонтали */
 }
 
 button {
@@ -344,14 +391,41 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-self: center;
 }
 
 button:hover {
-    background-color: #ffc736;
+    background-color: #ffb300;
 }
 
 .logo {
-    width: 100px;
-    margin-bottom: 20px;
+    width: 100px; /* Ширина логотипа */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для вкладок */
+
+.tab button {
+    background-color: #20190725;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-size: 14px;
+    margin: 0 2px;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab button:hover {
+    background-color: #ffc736;
+}
+
+.tab button.active {
+    background-color: #ffc736;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
 }
