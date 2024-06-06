@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Платформа для оптимизации учебного процесса</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3f4b1058-72f7-4dc3-9c29-2fd9aab905cf&lang=ru_RU"
+type="text/javascript"></script>
+<script type="text/javascript">
+    ymaps.ready(init);
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [47.230686, 39.739772], // Замените на координаты вашего места
+            zoom: 10
+        });
+
+        var myPlacemark = new ymaps.Placemark([47.230686, 39.739772], {
+            balloonContent: 'Это точка на карте'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
 </head>
 <body>
   
@@ -14,7 +31,7 @@
                 <h1><img src="img/logo.png" alt="Логотип Кодозавр"> Кодозавр</h1>
                 <ul>
                     <li><a href="#" id="loginBtn">Вход</a></li>
-                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#" id="courses">Курсы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -40,10 +57,29 @@
                         <div class="sub-branch">
                             <h3>Arduino Uno для детей от 10 лет</h3>
                             <p>В этом курсе дети будут знакомиться с миром электроники и программирования, используя платформу Arduino Uno. Они научатся подключать различные датчики, моторы и другие устройства к Arduino, а затем программировать их для создания разнообразных умных устройств и роботов.</p>
+                            <p><b>Возраст:</b> от 10 лет</p>
+                            <p><b>Цена:</b> 1000р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
                         </div>
                         <div class="sub-branch">
                             <h3>Робототехника для детей 4-6 лет</h3>
                             <p>Этот курс разработан специально для самых маленьких учеников, чтобы ввести их в мир робототехники и программирования. Дети будут использовать простые роботы и конструкторы для освоения основных концепций, таких как движение, сенсоры и последовательность команд.</p>
+                            <p><b>Возраст:</b> от 4 лет</p>
+                            <p><b>Цена:</b> 2000р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
+                        </div>
+                        <div class="sub-branch">
+                            <h3>Робототехника для детей старше 7 лет</h3>
+                            <p>Курс робототехники для детей от 7 лет - увлекательное погружение в мир технологий. Дети изучают механику, электронику и программирование, создавая и управляя роботами. Уроки структурированы для постепенного развития навыков, используют интерактивные методы и поддержку инструкторов.</p>
+                            <p><b>Возраст:</b> от 7 лет</p>
+                            <p><b>Цена:</b> 2500р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,10 +91,38 @@
                         <div class="sub-branch">
                             <h3>Блочное программирование для детей от 6 лет</h3>
                             <p>В этом курсе дети используют графические блоки, чтобы создавать простые программы и игры. Блочное программирование вводит основные концепции логики и последовательности действий, помогая детям развивать свои навыки в области решения задач и логического мышления.</p>
+                            <p><b>Возраст:</b> от 6 лет</p>
+                            <p><b>Цена:</b> 2500р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
                         </div>
                         <div class="sub-branch">
                             <h3>Программирование на Python для начинающих</h3>
                             <p>Этот курс призван ввести детей в мир программирования с использованием языка Python. Учащиеся узнают основные концепции программирования, такие как переменные, условные операторы и циклы, и начнут создавать свои собственные программы, начиная с простых консольных приложений.</p>
+                            <p><b>Возраст:</b> от 7 лет</p>
+                            <p><b>Цена:</b> 1500р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
+                        </div>
+                        <div class="sub-branch">
+                            <h3>Программирование на Python для продвинутых</h3>
+                            <p>Этот курс призван ввести детей в мир программирования с использованием языка Python. Учащиеся узнают основные концепции программирования, такие как переменные, условные операторы и циклы, и начнут создавать свои собственные программы, начиная с простых консольных приложений.Этот курс предназначен для детей, уже знакомых с основами Python или имеющих некоторый опыт программирования. В нем будут рассматриваться более сложные концепции. Дети также начнут работать над проектами, включающими создание веб-приложений, игр или даже машинного обучения.</p>
+                            <p><b>Возраст:</b> от 10 лет</p>
+                            <p><b>Цена:</b> 2500р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
+                        </div>
+                        <div class="sub-branch">
+                            <h3>Программирование на JavaScript для начинающих</h3>
+                            <p>Этот курс предлагает введение в программирование с использованием языка JavaScript, который широко используется для создания интерактивных веб-сайтов и приложений. Дети изучат основы JavaScript, такие как переменные, операторы и функции, и начнут создавать простые веб-приложения и игры.</p>
+                            <p><b>Возраст:</b> от 7 лет</p>
+                            <p><b>Цена:</b> 2000р</p>
+                            <div class="button-container">
+                                <button>Записаться на курс</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,18 +130,29 @@
         </div>
     </section>
 
-    <section id="cta">
+    <section id="mapSection">
         <div class="container">
-            <h2>Хотите начать обучение?</h2>
-            <a href="#" class="btn">Записаться на курс</a>
+            <h2>Наше местоположение</h2>
+            <div id="map" style="width: 100%; height: 400px;"></div>
         </div>
     </section>
-
     <footer>
         <div class="container">
-            <p>&copy; 2024 Платформа для оптимизации учебного процесса</p>
+            <div class="footer-info">
+                <div class="social-media">
+                    <a href="https://vk.com/startjunior" target="_blank">VKontakte</a>
+                    <a href="https://www.youtube.com/channel/UCDBBxFZ_exYNyAxQiTwbVcA" target="_blank">YouTube</a>
+                    <a href="https://www.instagram.com/sj_kazan/" target="_blank">Instagram</a>
+                </div>
+                <div class="contact-info">
+                    <a href="http://www.startjunior.ru/" target="_blank">Родительский сайт Start Junior</a>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Электронная почта: startjunior56@gmail.com</p>
+                </div>
+            </div>
         </div>
     </footer>
+    
 
 
 <!-- Модальное окно -->
@@ -85,31 +160,105 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <img src="img/logo.png" alt="Логотип" class="logo"> <!-- Логотип -->
-        <form>
-            <label for="username">Имя пользователя</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Пароль</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Войти</button>
-        </form>
+        <div class="tab">
+            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Login')">Войти</button>
+            <button class="tablinks" onclick="openTab(event, 'Register')">Регистрация</button>
+        </div>
+        <div id="Login" class="tabcontent">
+            <form>
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <label>
+                    <input type="checkbox" onclick="togglePasswordVisibility('password')"> Показать пароль
+                </label>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+        <div id="Register" class="tabcontent">
+            <form>
+                <label for="newUsername">Имя пользователя</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                <label for="newPassword">Пароль</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <label for="confirmPassword">Подтвердите пароль</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <label>
+                    <input type="checkbox" onclick="togglePasswordVisibility('newPassword', 'confirmPassword')"> Показать пароли
+                </label>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
     </div>
 </div>
 
+
+
+
+
 <script>
-    var modal = document.getElementById("loginModal");
-    var btn = document.getElementById("loginBtn");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-    span.onclick = function() {
+    // Получить модальное окно
+var modal = document.getElementById("loginModal");
+
+// Получить кнопку, которая открывает модальное окно
+var btn = document.getElementById("loginBtn");
+
+// Получить элемент <span>, который закрывает модальное окно
+var span = document.getElementsByClassName("close")[0];
+
+// Когда пользователь нажимает на кнопку, открыть модальное окно
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Когда пользователь нажимает на <span> (x), закрыть модальное окно
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Когда пользователь нажимает в любом месте вне модального окна, закрыть его
+window.onclick = function(event) {
+    if (event.target == modal) {
         modal.style.display = "none";
     }
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+}
+
+// Функция для переключения вкладок
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Открыть вкладку по умолчанию
+document.getElementById("defaultOpen").click();
+
+// Функция для переключения видимости пароля
+function togglePasswordVisibility(...ids) {
+    ids.forEach(id => {
+        var input = document.getElementById(id);
+        if (input.type === "password") {
+            input.type = "text";
+        } else {
+            input.type = "password";
+        }
+    });
+}
+
+ // Добавить скроллинг к секции "Курсы"
+ document.getElementById("courses").addEventListener("click", function() {
+            document.getElementById("branches2").scrollIntoView({ behavior: 'smooth' });
+        });
+
 </script>
 </body>
 </html>
