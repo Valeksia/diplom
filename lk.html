@@ -1,56 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный кабинет</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        .avatar img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
-  
     <header>
         <div class="container">
             <nav>
-                <h1><img src="img/logo.png" alt="Логотип Кодозавр"> Кодозавр</h1>
+                <h1><img src="img/logo.png" alt="Логотип Кодозавр">Кодозавр</h1>
                 <ul>
-                    <li><a href="in">Вход</a></li>
-                    <li><a href="#">Курсы</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#" id="cours">Курсы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
         </div>
-    </header>    
+    </header>
 
-    <section id="personal-cabinet">
+    <section id="profile">
         <div class="container">
             <h2>Личный кабинет</h2>
-            <div class="user-profile">
-                <div class="avatar">
-                    <img src="img/avatar.png" alt="Аватар пользователя">
-                </div>
-                <div class="user-info">
+            <div class="profile-info">
+                <img src="img/avatar.png" alt="Аватар пользователя">
+                <div class="info">
                     <h3>Имя пользователя</h3>
-                    <p>Дата регистрации: <span class="registration-date">01.01.2024</span></p>
-                    <p>Статус: <span class="status">Активен</span></p>
+                    <p>Электронная почта: user@example.com</p>
+                    <p>Телефон: +7 (800) 123-45-67</p>
+                    <p>Дата регистрации: 01.01.2023</p>
                 </div>
-                <div class="progress-info">
-                    <p>Прогресс прохождения курсов:</p>
-                    <div class="progress-bar">                       
-                        <div class="progress-bar-inner" style="width: 60%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses">
+        <div class="container">
+            <h2>Мои курсы</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <h3>Робототехника для детей 4-6 лет</h3>
+                    <p>Прогресс: 60%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
                     </div>
-                    <p>Количество курсов купленных: <span class="course-count">5</span></p>                   
+                    <button class="continue-btn">Продолжить курс</button>
+                </div>
+                <div class="course-item">
+                    <h3>Программирование на Python для начинающих</h3>
+                    <p>Прогресс: 80%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <button class="continue-btn">Продолжить курс</button>
+                </div>
+                <div class="course-item">
+                    <h3>Программирование на JavaScript для начинающих</h3>
+                    <p>Прогресс: 30%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div>
+                    </div>
+                    <button class="continue-btn">Продолжить курс</button>
                 </div>
             </div>
         </div>
@@ -58,7 +69,18 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Платформа для оптимизации учебного процесса</p>
+            <div class="footer-info">
+                <div class="social-media">
+                    <a href="https://vk.com/startjunior" target="_blank">VKontakte</a>
+                    <a href="https://www.youtube.com/channel/UCDBBxFZ_exYNyAxQiTwbVcA" target="_blank">YouTube</a>
+                    <a href="https://www.instagram.com/sj_kazan/" target="_blank">Instagram</a>
+                </div>
+                <div class="contact-info">
+                    <a href="http://www.startjunior.ru/" target="_blank">Start Junior</a>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Электронная почта: startjunior56@gmail.com</p>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
