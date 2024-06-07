@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Платформа для оптимизации учебного процесса</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=3f4b1058-72f7-4dc3-9c29-2fd9aab905cf&lang=ru_RU"
-type="text/javascript"></script>
-<script type="text/javascript">
-    ymaps.ready(init);
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [47.230686, 39.739772], // Замените на координаты вашего места
-            zoom: 10
-        });
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3f4b1058-72f7-4dc3-9c29-2fd9aab905cf&lang=ru_RU" type="text/javascript"></script>
 
-        var myPlacemark = new ymaps.Placemark([47.230686, 39.739772], {
-            balloonContent: 'Это точка на карте'
-        });
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [47.230686, 39.739772], // Замените на координаты вашего места
+                zoom: 10
+            });
 
-        myMap.geoObjects.add(myPlacemark);
-    }
-</script>
+            var myPlacemark = new ymaps.Placemark([47.230686, 39.739772], {
+                balloonContent: 'Это точка на карте'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+            }
+    </script>
 </head>
+
 <body>
-  
     <header>
         <div class="container">
             <nav>
-                <h1><img src="img/logo.png" alt="Логотип Кодозавр"> Кодозавр</h1>
+                <h1><img src="img/logo.png" alt="Логотип Кодозавр">Кодозавр</h1>
                 <ul>
                     <li><a href="#" id="loginBtn">Вход</a></li>
-                    <li><a href="#" id="courses">Курсы</a></li>
+                    <li><a href="#" id="cours">Курсы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -136,6 +136,7 @@ type="text/javascript"></script>
             <div id="map" style="width: 100%; height: 400px;"></div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="footer-info">
@@ -145,7 +146,7 @@ type="text/javascript"></script>
                     <a href="https://www.instagram.com/sj_kazan/" target="_blank">Instagram</a>
                 </div>
                 <div class="contact-info">
-                    <a href="http://www.startjunior.ru/" target="_blank">Родительский сайт Start Junior</a>
+                    <a href="http://www.startjunior.ru/" target="_blank">Start Junior</a>
                     <p>Телефон: +7 (123) 456-78-90</p>
                     <p>Электронная почта: startjunior56@gmail.com</p>
                 </div>
@@ -153,8 +154,6 @@ type="text/javascript"></script>
         </div>
     </footer>
     
-
-
 <!-- Модальное окно -->
 <div id="loginModal" class="modal">
     <div class="modal-content">
@@ -255,7 +254,7 @@ function togglePasswordVisibility(...ids) {
 }
 
  // Добавить скроллинг к секции "Курсы"
- document.getElementById("courses").addEventListener("click", function() {
+ document.getElementById("cours").addEventListener("click", function() {
             document.getElementById("branches2").scrollIntoView({ behavior: 'smooth' });
         });
 
