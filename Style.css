@@ -104,22 +104,6 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.container2 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center; /* Центрируем заголовок */
-}
-
-h2 {
-    margin-bottom: 30px;
-}
-
-.branches-main {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
 .column {
     flex-basis: calc(45% - 10px); /* Уменьшаем ширину колонок до 45% */
@@ -161,12 +145,6 @@ h2 {
     }
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
 
 footer p {
     margin: 0;
@@ -185,6 +163,12 @@ footer p {
 
 
 /*футер*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
     background-color: #ffc736;
     padding: 20px 0;
@@ -223,50 +207,76 @@ footer {
 
 .footer-info p {
     margin: 5px 0;
-    color: #555;
+    color: #333;
 }
-
-
 
 /* Стили для личного кабинета */
-#personal-cabinet {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 50px 0;
+#profile {
+    padding: 20px 0;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.user-profile {
+#profile .profile-info {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.avatar {
+#profile .profile-info img {
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     margin-right: 20px;
 }
 
-.user-info {
-    text-align: left;
+#profile .info {
+    flex: 1;
 }
 
-.user-info h3 {
+#profile .info h3 {
     margin-top: 0;
+    color: #ffc736;
+}
+
+#cours {
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+#courses .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#courses .course-item {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#courses .course-item h3 {
+    color: #ffc736;
 }
 
 .progress-bar {
-    width: 80%;
-    background-color: #ddd;
-    border-radius: 10px;
-    height: 20px;
-    margin-bottom: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
 }
+
+
+
+
 
 /* Стили для прогресса прохождения курсов */
 .progress-bar-inner {
-    background-color: #007bff;
+    background-color: #ffc736;
     border-radius: 10px;
     height: 100%;
 }
@@ -428,4 +438,72 @@ button:hover {
     display: none;
     padding: 20px;
     border-top: none;
+}
+/* Стили для личного кабинета */
+#profile {
+    padding: 20px 0;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile .profile-info {
+    display: flex;
+    align-items: center;
+}
+
+#profile .profile-info img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+#profile .info {
+    flex: 1;
+}
+
+#profile .info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+
+
+#courses .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#courses .course-item {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#courses .course-item h3 {
+    color: #333;
+}
+
+
+.progress {
+    background: #ffc736;
+    height: 20px;
+}
+
+.continue-btn {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-btn:hover {
+    background: #ffc736;
 }
