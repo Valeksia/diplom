@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1><img src="img/logo.png" alt="Логотип Кодозавр">Кодозавр</h1>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#" id="cours">Курсы</a></li>
+                    <li><a href="#" id="contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="profile">
+        <div class="container">
+            <h2>Личный кабинет учителя</h2>
+            <div class="profile-info">
+                <img src="img/avatar.png" alt="Аватар пользователя">
+                <div class="info">
+                    <h3>Калашникова Ирина Сергеевна</h3>
+                    <p>Электронная почта: user@example.com</p>
+                    <p>Телефон: +7 (800) 123-45-67</p>
+                    <p>Дата регистрации: 01.01.2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="courses">
+        <div class="container">
+            <h2>Расписание</h2>
+            <div id="calendar-container">
+                <div id="calendar-header">
+                    <button id="prev-month">Назад</button>
+                    <h2 id="month-year"></h2>
+                    <button id="next-month">Вперед</button>
+                </div>
+                <table id="calendar">
+                    <thead>
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Вс</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Дни месяца будут добавлены здесь динамически -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="event-form-container">
+                <h3>Добавить занятие</h3>
+                <form id="event-form">
+                    <label for="event-date">Дата:</label>
+                    <input type="date" id="event-date" required>
+                    <button type="submit">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+        
+    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="social-media">
+                    <a href="https://vk.com/startjunior" target="_blank">VKontakte</a>
+                    <a href="https://www.youtube.com/channel/UCDBBxFZ_exYNyAxQiTwbVcA" target="_blank">YouTube</a>
+                    <a href="https://www.instagram.com/sj_kazan/" target="_blank">Instagram</a>
+                </div>
+                <div class="contact-info">
+                    <a href="http://www.startjunior.ru/" target="_blank">Start Junior</a>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Электронная почта: startjunior56@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
