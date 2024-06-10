@@ -25,23 +25,33 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <h1><img src="img/logo.png" alt="Логотип Кодозавр">Кодозавр</h1>
-                <ul>
-                    <li><a href="#" id="loginBtn">Вход</a></li>
-                    <li><a href="#" id="cours">Курсы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>    
+   <header>
+    <div class="container">
+        <nav>
+            <h1><img src="img/logo.png" alt="Логотип Кодозавр">Кодозавр</h1>
+            <div class="burger-menu">
+                <div class="burger-icon" id="burgerIcon">&#9776;</div>
+                <div class="burger-dropdown" id="burgerDropdown">
+                    <ul class="menu" id="menu">
+                        <li><a href="#" id="loginBtn">Вход</a></li>
+                        <li><a href="#" id="cours">Курсы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+    
+  
+    
+    
+    
 
     <section id="about">
         <div class="container">
             <h2>О нас</h2>
-            <p>Мы верим, что программирование и робототехника помогает развить у детей такие важные навыки, как креативность, решение проблем, аналитическое мышление и коммуникация. Программирование также открывает возможности для будущей карьеры в технологической сфере. Наш сайт также предлагает различные игровые задания и конкурсы, чтобы сделать обучение более интересным и мотивирующим для детей. Мы стремимся вдохновить их на изучение программирования и помочь им обрести уверенность в своих способностях.Каждый урок содержит понятное объяснение нового материала и практические задания, которые помогут детям закрепить полученные знания.</p>
+            <p>Мы верим, что программирование и робототехника помогают развить такие важные навыки, как креативность, аналитическое мышление и коммуникация. Наш сайт поможет отследить твои успехи в пути становления программистом.</p>
         </div>
     </section>
 
@@ -55,13 +65,14 @@
                     </div>
                     <div class="sub-branches">
                         <div class="sub-branch">
-                            <h3>Arduino Uno для детей от 10 лет</h3>
+                            <h3 id="course-name">Arduino Uno для детей от 10 лет</h3>
                             <p>В этом курсе дети будут знакомиться с миром электроники и программирования, используя платформу Arduino Uno. Они научатся подключать различные датчики, моторы и другие устройства к Arduino, а затем программировать их для создания разнообразных умных устройств и роботов.</p>
                             <p><b>Возраст:</b> от 10 лет</p>
                             <p><b>Цена:</b> 1000р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button  onclick="showFeedbackForm('Arduino Uno для детей от 10 лет')">Записаться на курс</button>
                             </div>
+                            
                         </div>
                         <div class="sub-branch">
                             <h3>Робототехника для детей 4-6 лет</h3>
@@ -69,8 +80,9 @@
                             <p><b>Возраст:</b> от 4 лет</p>
                             <p><b>Цена:</b> 2000р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button onclick="showFeedbackForm('Робототехника для детей 4-6 лет')">Записаться на курс</button>
                             </div>
+                            
                         </div>
                         <div class="sub-branch">
                             <h3>Робототехника для детей старше 7 лет</h3>
@@ -78,10 +90,12 @@
                             <p><b>Возраст:</b> от 7 лет</p>
                             <p><b>Цена:</b> 2500р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button onclick="showFeedbackForm('Робототехника для детей старше 7 лет')">Записаться на курс</button>
                             </div>
+                            
                         </div>
                     </div>
+                    
                 </div>
                 <div class="column">
                     <div class="branch2">
@@ -94,7 +108,7 @@
                             <p><b>Возраст:</b> от 6 лет</p>
                             <p><b>Цена:</b> 2500р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button onclick="showFeedbackForm('Блочное программирование для детей от 6 лет')">Записаться на курс</button>
                             </div>
                         </div>
                         <div class="sub-branch">
@@ -103,7 +117,7 @@
                             <p><b>Возраст:</b> от 7 лет</p>
                             <p><b>Цена:</b> 1500р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button onclick="showFeedbackForm('Программирование на Python для начинающих')">Записаться на курс</button>
                             </div>
                         </div>
                         <div class="sub-branch">
@@ -112,7 +126,7 @@
                             <p><b>Возраст:</b> от 10 лет</p>
                             <p><b>Цена:</b> 2500р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button onclick="showFeedbackForm('Программирование на Python для продвинутых')">Записаться на курс</button>
                             </div>
                         </div>
                         <div class="sub-branch">
@@ -121,7 +135,7 @@
                             <p><b>Возраст:</b> от 7 лет</p>
                             <p><b>Цена:</b> 2000р</p>
                             <div class="button-container">
-                                <button>Записаться на курс</button>
+                                <button onclick="showFeedbackForm('Программирование на JavaScript для начинающих')">Записаться на курс</button>
                             </div>
                         </div>
                     </div>
@@ -154,110 +168,73 @@
         </div>
     </footer>
     
-<!-- Модальное окно -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="img/logo.png" alt="Логотип" class="logo"> <!-- Логотип -->
-        <div class="tab">
-            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Login')">Войти</button>
-            <button class="tablinks" onclick="openTab(event, 'Register')">Регистрация</button>
-        </div>
-        <div id="Login" class="tabcontent">
-            <form>
-                <label for="username">Имя пользователя</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required>
-                <label>
-                    <input type="checkbox" onclick="togglePasswordVisibility('password')"> Показать пароль
-                </label>
-                <button type="submit">Войти</button>
-            </form>
-        </div>
-        <div id="Register" class="tabcontent">
-            <form>
-                <label for="newUsername">Имя пользователя</label>
-                <input type="text" id="newUsername" name="newUsername" required>
-                <label for="newPassword">Пароль</label>
-                <input type="password" id="newPassword" name="newPassword" required>
-                <label for="confirmPassword">Подтвердите пароль</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-                <label>
-                    <input type="checkbox" onclick="togglePasswordVisibility('newPassword', 'confirmPassword')"> Показать пароли
-                </label>
-                <button type="submit">Зарегистрироваться</button>
-            </form>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logo.png" alt="Логотип" class="logo">
+            <div class="tab">
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Login')">Войти</button>
+                <button class="tablinks" onclick="openTab(event, 'Register')">Регистрация</button>
+            </div>
+            <div id="Login" class="tabcontent">
+                <form>
+                    <label for="username">Имя пользователя</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                    <label>
+                        <input type="checkbox" onclick="togglePasswordVisibility('password')"> Показать пароль
+                    </label>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+            <div id="Register" class="tabcontent">
+                <form>
+                    <label for="newUsername">Имя пользователя</label>
+                    <input type="text" id="newUsername" name="newUsername" required>
+                    <label for="newPassword">Пароль</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                    <label for="confirmPassword">Подтвердите пароль</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <label>
+                        <input type="checkbox" onclick="togglePasswordVisibility('newPassword', 'confirmPassword')"> Показать пароли
+                    </label>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-<script>
-    // Получить модальное окно
-var modal = document.getElementById("loginModal");
-
-// Получить кнопку, которая открывает модальное окно
-var btn = document.getElementById("loginBtn");
-
-// Получить элемент <span>, который закрывает модальное окно
-var span = document.getElementsByClassName("close")[0];
-
-// Когда пользователь нажимает на кнопку, открыть модальное окно
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// Когда пользователь нажимает на <span> (x), закрыть модальное окно
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Когда пользователь нажимает в любом месте вне модального окна, закрыть его
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Функция для переключения вкладок
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Открыть вкладку по умолчанию
-document.getElementById("defaultOpen").click();
-
-// Функция для переключения видимости пароля
-function togglePasswordVisibility(...ids) {
-    ids.forEach(id => {
-        var input = document.getElementById(id);
-        if (input.type === "password") {
-            input.type = "text";
-        } else {
-            input.type = "password";
-        }
-    });
-}
-
- // Добавить скроллинг к секции "Курсы"
- document.getElementById("cours").addEventListener("click", function() {
-            document.getElementById("branches2").scrollIntoView({ behavior: 'smooth' });
-        });
-
-</script>
+        
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="img/logo.png" alt="Логотип" class="logo">
+            <div id="feedback-form" class="feedback-form">
+                <h3 id="course-title">Форма обратной связи</h3>
+                <form id="feedbackForm">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name">
+                    <div id="name-error" class="error-message"></div>
+                    
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" name="surname">
+                    <div id="surname-error" class="error-message"></div>
+                    
+                    <label for="age">Возраст ребенка:</label>
+                    <input type="number" id="age" name="age">
+                    <div id="age-error" class="error-message"></div>
+                    
+                    <label for="phone">Телефон:</label>
+                    <input type="text" id="phone" name="phone">
+                    <div id="phone-error" class="error-message"></div>
+                    
+                    <div class="button-container">
+                        <button type="button" onclick="submitForm()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script> 
 </body>
 </html>
