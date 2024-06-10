@@ -3,9 +3,16 @@
     const menu = document.getElementById('menu');
 
     // Добавление обработчика события на клик по иконке бургер-меню
-    burgerIcon.addEventListener('click', () => {
-        menu.classList.toggle('open'); // Переключение класса для отображения/скрытия бургер-меню
+    document.addEventListener('DOMContentLoaded', () => {
+        const burgerIcon = document.getElementById('burgerIcon');
+        if (burgerIcon) {
+            const menu = document.getElementById('menu');
+            burgerIcon.addEventListener('click', () => {
+                menu.classList.toggle('open');
+            });
+        }
     });
+    
 
 /*калндарь учит*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -178,22 +185,20 @@ var feedbackModal = document.getElementById("feedbackModal");
 var spanFeedback = document.getElementsByClassName("close")[1];
 
 spanFeedback.onclick = function() {
+    clearForm();
     feedbackModal.style.display = "none";
 }
 
 window.onclick = function(event) {
     if (event.target == feedbackModal) {
+        clearForm();
         feedbackModal.style.display = "none";
     }
 }
 
 function openModal(courseName) {
     var courseTitle = document.getElementById("course-title");
-    var courseNameInput = document.getElementById("course-name");
-    
     courseTitle.textContent = "Запись на курс: " + courseName;
-    courseNameInput.value = courseName;
-    
     feedbackModal.style.display = "block";
 }
 
@@ -221,15 +226,22 @@ function submitForm() {
 
     var isValid = true;
 
-    // Валидация имени
+    // Валидация имени (только буквы)
+    var namePattern = /^[a-zA-Zа-яА-ЯёЁ]+$/;
     if (!name) {
         nameError.textContent = "Обязательно к заполнению";
         isValid = false;
+    } else if (!name.match(namePattern)) {
+        nameError.textContent = "Имя должно содержать только буквы";
+        isValid = false;
     }
 
-    // Валидация фамилии
+    // Валидация фамилии (только буквы)
     if (!surname) {
         surnameError.textContent = "Обязательно к заполнению";
+        isValid = false;
+    } else if (!surname.match(namePattern)) {
+        surnameError.textContent = "Фамилия должна содержать только буквы";
         isValid = false;
     }
 
@@ -256,8 +268,7 @@ function submitForm() {
         return;
     }
 
-    var message = "Запись на курс: " + courseName + "\n";
-    message += "Имя: " + name + "\n";
+    var message = "Имя: " + name + "\n";
     message += "Фамилия: " + surname + "\n";
     message += "Возраст ребенка: " + age + "\n";
     message += "Телефон: " + phone;
@@ -269,8 +280,23 @@ function submitForm() {
 }
 
 function closeFeedbackModal() {
+    clearForm();
     feedbackModal.style.display = "none";
 }
+
+function clearForm() {
+    document.getElementById("course-name").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("surname").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("phone").value = "";
+
+    document.getElementById("name-error").textContent = "";
+    document.getElementById("surname-error").textContent = "";
+    document.getElementById("age-error").textContent = "";
+    document.getElementById("phone-error").textContent = "";
+}
+
 
     /*окно авториз и регистр*/
     var loginModal = document.getElementById("loginModal");
