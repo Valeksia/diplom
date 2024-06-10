@@ -33,6 +33,64 @@ header {
     color: #fff;
     padding: 20px 0;
 }
+/* Стилизация для десктопной версии */
+.menu {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block; /* Отображаем пункты в строку */
+    margin-right: 20px; /* Добавляем отступ между пунктами */
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Убираем отступ у последнего пункта */
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Скрытие значка бургер-меню на десктопной версии */
+.burger-icon {
+    display: none;
+}
+
+/* Стилизация для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Показываем бургер-меню только на мобильных устройствах */
+        align-items: center;
+    }
+
+    .burger-icon {
+        display: block; /* Показываем значок бургер-меню только на мобильных устройствах */
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .menu {
+        display: none; /* Изначально скрываем меню */
+        transition: all 0.3s ease; /* Добавляем плавную анимацию при изменении свойств */
+    }
+    
+    .menu.open {
+        display: flex !important; /* При наличии класса open меню отображается */
+        flex-direction: column; /* Отображаем пункты вертикально */
+        align-items: center;
+        opacity: 1; /* Добавляем прозрачность */
+    }
+
+    .menu.open li {
+        margin-bottom: 10px; /* Отступ между пунктами в бургер-меню */
+    }
+}
+
+
+
 
 nav {
     display: flex;
@@ -372,13 +430,13 @@ label {
 input[type="text"],
 input[type="password"] {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Уменьшенный отступ между элементами */
     border: none;
     border-bottom: 2px solid #ccc;
     border-radius: 0;
     font-size: 16px;
-    width: 100%; /* Полная ширина */
-    box-sizing: border-box; /* Учет padding и border в общей ширине */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus,
@@ -390,6 +448,7 @@ input[type="password"]:focus {
 .button-container {
     display: flex;
     justify-content: center; /* Центровка кнопки по горизонтали */
+    margin-top: 20px; /* Добавление отступа сверху для кнопки */
 }
 
 button {
@@ -404,7 +463,7 @@ button {
 }
 
 button:hover {
-    background-color: #ffb300;
+    background-color: #ffb400; /* Изменение цвета при наведении */
 }
 
 .logo {
@@ -495,15 +554,182 @@ button:hover {
     height: 20px;
 }
 
-.continue-btn {
-    background: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .continue-btn:hover {
     background: #ffc736;
 }
+
+
+/*календарь*/
+#calendar-container {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffc736;
+    color: #ffffff;
+}
+
+#calendar-header h2 {
+    margin: 0;
+}
+
+#calendar-header button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#calendar td {
+    cursor: pointer;
+}
+
+#calendar .today {
+    background-color: #f0f0f0;
+}
+
+#calendar .event {
+    background-color: #ffc736;
+}
+
+#event-form-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#event-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#event-form label {
+    margin-bottom: 5px;
+}
+
+#event-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#event-form button {
+    padding: 5px 10px;
+    background-color: #ffc736;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#event-form button:hover {
+    background-color: #ffc736;
+}
+@media (max-width: 768px) {
+    #schedule-container {
+        flex-direction: column;
+    }
+
+    #calendar-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #event-form-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #calendar-header button {
+        margin: 5px 0;
+    }
+}
+
+
+
+
+#course-calendar-container {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px; /* Добавляем отступ сверху, чтобы отделить календарь от предыдущего раздела */
+}
+
+#course-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffc736;
+    color: #ffffff;
+}
+
+#course-calendar-header h2 {
+    margin: 0;
+}
+
+#course-calendar-header button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#course-calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#course-calendar th, #course-calendar td {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#course-calendar td {
+    cursor: pointer;
+}
+
+#course-calendar .today {
+    background-color: #f0f0f0;
+}
+
+#course-calendar .course-day {
+    background-color: #ffc736;
+}
+
+
+
+  
