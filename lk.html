@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="#" id="cours">Курсы</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" id="contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -22,14 +22,14 @@
 
     <section id="profile">
         <div class="container">
-            <h2>Личный кабинет</h2>
+            <h2>Личный кабинет родителя</h2>
             <div class="profile-info">
                 <img src="img/avatar.png" alt="Аватар пользователя">
                 <div class="info">
-                    <h3>Имя пользователя</h3>
-                    <p>Электронная почта: user@example.com</p>
-                    <p>Телефон: +7 (800) 123-45-67</p>
-                    <p>Дата регистрации: 01.01.2023</p>
+                    <h3>Клименко Ирина Александровна</h3>
+                    <p>Электронная почта: irina@example.com</p>
+                    <p>Телефон: +7 (800) 777-45-67</p>
+                    <p>Дата регистрации: 04.01.2023</p>
                 </div>
             </div>
         </div>
@@ -45,7 +45,6 @@
                     <div class="progress-bar">
                         <div class="progress" style="width: 60%;"></div>
                     </div>
-                    <button class="continue-btn">Продолжить курс</button>
                 </div>
                 <div class="course-item">
                     <h3>Программирование на Python для начинающих</h3>
@@ -53,7 +52,6 @@
                     <div class="progress-bar">
                         <div class="progress" style="width: 80%;"></div>
                     </div>
-                    <button class="continue-btn">Продолжить курс</button>
                 </div>
                 <div class="course-item">
                     <h3>Программирование на JavaScript для начинающих</h3>
@@ -61,12 +59,43 @@
                     <div class="progress-bar">
                         <div class="progress" style="width: 30%;"></div>
                     </div>
-                    <button class="continue-btn">Продолжить курс</button>
                 </div>
             </div>
         </div>
     </section>
+</section>
+<section id="courses">
+    <div class="container">
+        <h2>Расписание курсов</h2>
+        <div id="course-calendar-container">
+            <div id="course-calendar-header">
+                <button id="course-prev-month">Назад</button>
+                <h2 id="course-month-year"></h2>
+                <button id="course-next-month">Вперед</button>
+            </div>
+            <table id="course-calendar">
+                <thead>
+                    <tr>
+                        <th>Пн</th>
+                        <th>Вт</th>
+                        <th>Ср</th>
+                        <th>Чт</th>
+                        <th>Пт</th>
+                        <th>Сб</th>
+                        <th>Вс</th>
+                    </tr>
+                </thead>
+                <tbody id="course-calendar-body">
+                    <!-- Дни месяца будут добавлены здесь динамически -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 
+
+    
+<script src="script.js"></script>
     <footer>
         <div class="container">
             <div class="footer-info">
