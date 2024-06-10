@@ -267,7 +267,6 @@ footer {
     margin: 5px 0;
     color: #333;
 }
-
 /* Стили для личного кабинета */
 #profile {
     padding: 20px 0;
@@ -295,7 +294,7 @@ footer {
 
 #profile .info h3 {
     margin-top: 0;
-    color: #ffc736;
+    color: #333;
 }
 
 #cours {
@@ -318,7 +317,12 @@ footer {
 }
 
 #courses .course-item h3 {
-    color: #ffc736;
+    color: #000000;
+}
+
+.progress {
+    background: #85FFB6;
+    height: 20px;
 }
 
 .progress-bar {
@@ -328,7 +332,9 @@ footer {
     margin: 10px 0;
 }
 
-
+.continue-btn:hover {
+    background: #ffc736;
+}
 
 
 
@@ -393,7 +399,7 @@ footer {
     max-width: 400px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideDown 0.5s;
-    text-align: center; /* Центровка заголовка и логотипа */
+    text-align: center; 
 }
 
 @keyframes slideDown {
@@ -406,7 +412,7 @@ footer {
     float: right;
     font-size: 28px;
     font-weight: bold;
-    margin-right: -10px; /* Уменьшение отступа */
+    margin-right: -10px; 
 }
 
 .close:hover,
@@ -419,7 +425,7 @@ footer {
 form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Выравнивание по левому краю */
+    align-items: flex-start; 
 }
 
 label {
@@ -428,9 +434,10 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="number"] {
     padding: 10px;
-    margin-bottom: 5px; /* Уменьшенный отступ между элементами */
+    margin-bottom: 5px; 
     border: none;
     border-bottom: 2px solid #ccc;
     border-radius: 0;
@@ -440,35 +447,41 @@ input[type="password"] {
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="number"]:focus {
     outline: none;
-    border-bottom: 2px solid #ffc736; /* Цвет при фокусировке */
+    border-bottom: 2px solid #ffc736; 
 }
 
 .button-container {
     display: flex;
-    justify-content: center; /* Центровка кнопки по горизонтали */
-    margin-top: 20px; /* Добавление отступа сверху для кнопки */
+    justify-content: center; 
+    margin-top: 20px; 
 }
 
 button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #ffc736;
-    color: white;
+    background-color: #85FFB6;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #ffb400; /* Изменение цвета при наведении */
+    background-color: #ffb400; 
 }
 
 .logo {
-    width: 100px; /* Ширина логотипа */
-    margin-bottom: 20px; /* Отступ снизу */
+    width: 100px; 
+    margin-bottom: 20px; 
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
 }
 
 /* Стили для вкладок */
@@ -497,65 +510,6 @@ button:hover {
     display: none;
     padding: 20px;
     border-top: none;
-}
-/* Стили для личного кабинета */
-#profile {
-    padding: 20px 0;
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#profile .profile-info {
-    display: flex;
-    align-items: center;
-}
-
-#profile .profile-info img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-}
-
-#profile .info {
-    flex: 1;
-}
-
-#profile .info h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-
-
-#courses .course-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#courses .course-item {
-    background: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#courses .course-item h3 {
-    color: #333;
-}
-
-
-.progress {
-    background: #ffc736;
-    height: 20px;
-}
-
-.continue-btn:hover {
-    background: #ffc736;
 }
 
 
